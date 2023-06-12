@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=MuseoModerno:ital,wght@1,100&family=Poppins&display=swap');
+  
+  
+:root{
+    --mainColor:#FF5D84;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.test{
+    border: solid black 2px;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+#nav .navbar-collapse {
+    margin-left: 100px;
+}
+
+#nav .navbar-brand h3{
+    color: var(--mainColor);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'MuseoModerno', sans-serif;
+}
+
+#nav input{
+    background-color: var(--mainColor);
+}
+
+#nav input::placeholder {
+    color: #fff;
+}
+
+#nav input[type="search"]{
+    color: #fff;
+}
+
+#nav .profile img{
+    max-width: 40px;
+    height: 40px;
+}
+
+#nav .btn{
+    background-color: var(--mainColor);
+    border: none;
+
+}
+
+#nav .profile a{
+    color: #515151;
+    font-size: 20px;
+}
+
+
+.nav-donasi{
+    background-color: var(--mainColor);
+}
+
+.nav-donasi h1{
+    color: #fff;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+
+/* =======HERO SECTION======= */
+
+#hero{
+    background-image: url("../img/heroImage.png");
+    background-size: cover;
+    height: 300px;
+}
+
+#hero h1{
+    color: #FFDD98;
+    font-size: 50px;
+    letter-spacing: 0.24em;
+    padding-top: 100px;
+}
+
+#hero p{
+    color: #fff;
+    border-radius: 18px;
+    background-color:#B62346;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* =======OPTION======= */
+
+#option{
+    margin: 60px 0;
+}
+
+#option .btn{
+    color: #fff;
+    background-color:#FF5D84;
+    max-height: 90px;
+    letter-spacing: 1px;
+}
+
+#option .btn-1{
+    font-size: 30px;
+    font-weight: 800;
+    padding: 5px 40px;
+}
+
+#option .btn-2{
+    font-size: 30px;
+    font-weight: 800;
+    padding: 25px 40px;
+}
+
+
+
+/* =======TOP DONASI======= */
+
+#top .top{
+    background-color:#FFA3A3;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#top h2{
+    color: #962929;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+
+#top .card-donasi{
+    position: relative;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 370px;
+    margin: 0 auto;
+}
+
+#top .card-donasi .card-body{
+    position: absolute;
+    width: 230px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#top .card-donasi .img-top{
+    max-height: 150px;
+}
+
+#top .card-donasi .card-body a{
+    color: black;
+}
+
+#top .card-donasi .card-title{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#top .card-donasi p{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+/* =======LIST DONASI======= */
+
+#ldonasi #nav {
+    background-color: var(--mainColor);
+}
+
+
+#ldonasi #nav h3{
+    color: #fff;
+}
+
+#ldonasi #nav img{
+    max-width: 50px;
+    height: 50px;
+}
+
+#ldonasi #nav input{
+    background-color: #fff;
+}
+
+#ldonasi #nav .profile a{
+    color: #fff;
+    font-size: 20px;
+}
+
+#ldonasi #nav input::placeholder {
+    color: #000000;
+}
+
+#ldonasi #nav input[type="search"]{
+    color: #000000;
+}
+
+#ldonasi .categories a{
+    background-color: var(--mainColor);
+    max-width: 150px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#ldonasi .list-donasi .donasi img{
+    max-width: 300px;
+    max-height: 150px;
+    margin: 0 auto;
+}
+
+#ldonasi .list-donasi .donasi h3{
+    color: #515151;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#ldonasi .list-donasi .donasi h4{
+    color: var(--mainColor);
+    font-weight: 700;
+    font-size: 25px;
+}
+#ldonasi .list-donasi .donasi p{
+    color: #515151;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+/* =======DONASI======= */
+
+#nav-donasi .navbar{
+    height: 60px;
+}
+
+#donasi{
+    background-color: var(--mainColor);
+}
+
+#donasi .detail-donasi{
+    background-color: #fff;
+    max-width: 1010px;
+    margin: 0 auto;
+}
+
+#donasi .detail-donasi h3{
+    color: #515151;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#donasi .detail-donasi h4{
+    color: var(--mainColor);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+#donasi .detail-donasi p{
+    color: #515151;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#donasi .detail-donasi .btn-donasi{
+    background-color: var(--mainColor);
+    max-width: 700px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+#donasi .detail-donasi .btn-donasi:hover{
+    background-color: #dd4d6f;
+}
+
+
+#donasi .detail-donasi .btn-donasi h3{
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+}
+
+
+#donasi .penggalang-dana{
+    background-color: #fff;
+    max-width: 1010px;
+    margin: 0 auto;
+}
+
+#donasi .penggalang-dana .title {
+    background-color: var(--mainColor);
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    max-width: 400px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+#donasi .penggalang-dana img{
+    max-width: 70px;
+    height: auto;
+}
+
+#donasi .penggalang-dana .pdana{
+    font-size: 20px;
+    font-weight: 300;
+    color: #515151;
+}
+
+#donasi .penggalang-dana .donator h4{
+    background-color: var(--mainColor);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 150px;
+    height: 55px;
+    margin: 0 auto;
+}
+
+#donasi .penggalang-dana .donator .box-donator{
+    background-color: #EAEAEA;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+#donasi .penggalang-dana .donator .box-donator .name{
+    font-size: 25px;
+    font-weight: 500;
+    color: #515151;
+}
+
+#donasi .penggalang-dana .donator .box-donator .name p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #515151;
+}
+
+#donasi .penggalang-dana .donator .box-donator img{
+    max-width: 50px;
+    height: auto;
+}
+
+
+/* =======KATEGORI======= */
+
+#category .categories .category img{
+    max-width: 70px;
+    height: 60px;
+}
+
+#category .categories .category h3{
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+
+}
+
+#category .categories .category{
+    background-color: var(--mainColor);
+    max-width: 650px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+
+/* =======GALANG DANA======= */
+
+
+#galang-dana .form-gdana .btn{
+    background-color: var(--mainColor);
+    border: none;
+
+}
+
+
+/* =======FORM DONATION======= */
+
+#fdonasi .form-gdana .btn{
+    background-color: var(--mainColor);
+    border: none;
+
+}
+
+
+/* =======LOGIN======= */
+
+#login .lcard{
+    max-width: 450px;
+    height: 500px;
+    background-color: var(--mainColor);
+    color: #fff;
+    position: relative;
+}
+
+#login .lcard .welc{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#login .lcard p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+#login .lcard img{
+    width: 40px;
+    height: 50px;
+}
+
+
+#login .lcard .tlogo{
+    position: absolute;
+    /* width: 230px;    */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#login .btn{
+    background-color: var(--mainColor);
+    border: none;
+
+}
+
+/* #profile .body-prof{
+    background-color: var(--mainColor);
+} */
+
+#profile .body-prof .user-donasi{
+    background-color: #fff;
+}
+
+#profile .body-prof .user-donasi .title{
+    background-color: var(--mainColor);
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    max-width: 400px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+
+#profile .body-prof .user-donasi .box-donator{
+    background-color: #EAEAEA;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+#profile .body-prof .user-donasi .box-donator .name{
+    font-size: 25px;
+    font-weight: 500;
+    color: #515151;
+}
+
+#profile .body-prof .user-donasi .box-donator .name p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #515151;
+}
+
+#profile .body-prof .user-donasi .box-donator img{
+    max-width: 50px;
+    height: auto;
+}
+
+
+#footer{
+    background-color: var(--mainColor);
+    color: #fff;
+}
+
+#footer .sec-foot{
+    max-width: 150px;
+}
+
+#footer .sosmed {
+    max-width: 50px;
+}

@@ -1,0 +1,88 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load rupiah_tags %}
+
+{% block content %}
+
+<section id="ldonasi">
+  <div id="nav" class="">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid main-color">
+            <a class="navbar-brand" href="{% url 'home' %}">
+              <div class="d-flex tlogo justify-content-center">
+                <img src="{% static 'img/logo-white.png' %}" alt="Logo" class="d-inline-block align-text-top">
+                <h3 class="ms-2"><b>BUNGA<br>PEDULI</b></h3>
+              </div>
+            </a>
+  
+            <form role="search" method="get" action="{% url 'list-donasi' %}">
+                <input class="form-control me-2 rounded-pill" type="search" name="q" placeholder="Cari Donasi" aria-label="Search">
+            </form>
+  
+            {% if request.user.is_authenticated %}
+            <div class="d-flex profile">
+              <a href="{% url 'profile' %}" class="mt-2 me-2"><b>{{ request.user.username }}</b></a>
+              <img src="{% static 'img/profile.png' %}" alt="">
+            </div>
+            {% else %}
+  
+            <a class="btn btn-primary py-2 px-4" href="{% url 'login' %}">Login</a>
+  
+            {% endif %}
+  
+        </div>
+      </nav> 
+    </div>
+  </div>
+
+
+    <div class="container my-4">
+      <div class="row">
+
+        <div class="col-2 categories">
+              <a href="{% url 'list-donasi' %}" class="btn-donasi text-center row rounded-3 my-2">
+                <h6 class="col mt-2">All</h6>
+              </a>
+              <a href="{% url 'list-donasi' %}?q=kesehatan" class="btn-donasi text-center row rounded-3 my-2">
+                <h6 class="col mt-2">Kesehatan</h6>
+              </a>
+              <a href="{% url 'list-donasi' %}?q=pendidikan" class="btn-donasi text-center row rounded-3 my-2">
+                <h6 class="col mt-2">Pendidikan</h6>
+              </a>
+              <a href="{% url 'list-donasi' %}?q=bencana-alam" class="btn-donasi text-center row rounded-3 my-2">
+                <h6 class="col mt-2">Bencana Alam</h6>
+              </a>
+        </div>
+
+        <div class="col-10">
+          <div class="list-donasi">
+
+            {% for donation in donations %}
+    
+            <div class="donasi my-3">
+              <div class="row ms-5">
+                <div class="col-4 text-end">
+                  <img src="{{ donation.imageURL }}" alt="" class="img-fluid rounded-4">
+                </div>
+                <div class="col-8">
+                  <a href="{% url 'donasi' donation.id %}"><h3>{{ donation.name|capfirst }}</h3></a>
+                  <h4>{{ donation.collected | rupiah_format  }}</h4>
+                  <div class="row">
+                  <p class="col">Terkumpul dari {{ donation.fund_target | rupiah_format }}</p>
+                  <p class="col">{{ donation.time_span }} hari</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            {% endfor %}
+    
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock content %}
